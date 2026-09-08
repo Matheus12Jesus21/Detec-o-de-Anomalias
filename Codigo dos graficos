@@ -1,0 +1,65 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn.decomposition import PCA
+from sklearn.ensemble import IsolationForest
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.preprocessing import StandardScaler
+
+# 1. Preparação dos dados
+url = "https://storage.googleapis.com/download.tensorflow.org/data/creditcard.csv"
+df = pd.read_csv(url)
+
+df["Amount"] = np.log1p(df["Amount"])
+scaler = StandardScaler()
+df[["Amount", "Time"]] = scaler.fit_transform(df[["Amount", "Time"]])
+
+X = df.drop("Class", axis=1)
+y_real = df["Class"]
+
+# 2. Previsão da Máquina
+model = IsolationForest(contamination=0.01, random_state=42, n_jobs=-1)
+preds = model.fit_predict(X)
+y_pred = np.array([1 if p == -1 else 0 for p in preds])
+
+# 3. MENSURAÇÃO DE DESEMPENHO NO TERMINAL
+cm = confusion_matrix(y_real, y_pred)
+
+print("=" * 50)
+print("RESULTADO DA MAQUINA NO TERMINAL")
+print("=" * 50)
+print(f"Transacoes Normais Corretas (Acertos): {cm[0][0]}")
+print(f"Alarmes Falsos (Era Normal, Maquina disse Fraude): {cm[0][1]}")
+print(f"Fraudes Perdidas (Era Fraude, Maquina nao viu): {cm[1][0]}")
+print(f"Fraudes Capturadas (Acertos de Fraude): {cm[1][1]}")
+print("=" * 50)
+
+print("\n--- RELATORIO DE DESEMPENHO ---")
+print(classification_report(y_real, y_pred, target_names=["Normal", "Fraude"]))
+print("=" * 50)
+
+# 4. Preparação da Amostra Visual (2D)
+df_sample = X.sample(n=5000, random_state=42)
+pca = PCA(n_components=2)
+X_2d = pca.fit_transform(df_sample)
+
+real_sample = y_real.iloc[df_sample.index].values
+pred_sample = y_pred[df_sample.index]
+
+# 5. DESENHANDO OS DOIS GRÁFICOS LADO A LADO
+fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+
+# Gráfico 1: A Realidade (Gabarito)
+axes[0].scatter(X_2d[real_sample == 0, 0], X_2d[real_sample == 0, 1], c="dodgerblue", alpha=0.5, s=15, label="Normal")
+axes[0].scatter(X_2d[real_sample == 1, 0], X_2d[real_sample == 1, 1], c="red", alpha=0.9, s=40, label="Fraude Real")
+axes[0].set_title("1. A Realidade (Coluna Class)")
+axes[0].legend()
+
+# Gráfico 2: O que a Máquina Previu
+axes[1].scatter(X_2d[pred_sample == 0, 0], X_2d[pred_sample == 0, 1], c="dodgerblue", alpha=0.5, s=15, label="Previsto Normal")
+axes[1].scatter(X_2d[pred_sample == 1, 0], X_2d[pred_sample == 1, 1], c="red", alpha=0.9, s=40, label="Previsto Anomalia")
+axes[1].set_title("2. O que a Máquina Previu (Isolation Forest)")
+axes[1].legend()
+
+plt.tight_layout()
+plt.show()

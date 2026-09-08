@@ -26,13 +26,13 @@ Análise do parâmetro `contamination` e o impacto nos Falsos Positivos vs. Frau
 A redução de dimensionalidade com PCA permitiu comparar lado a lado a **Realidade** vs. a **Previsão do Modelo**:
 
 <a href="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" target="_blank">
-  <img src="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" width="1280" alt="grafico_comparativo3" />
+  <img src="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" width="1280" alt="grafico_comparativo.jpg" />
 </a>
 
 <a href="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" target="_blank">
-  <img src="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" width="1280" alt="grafico_comparativo2" />
+  <img src="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" width="1280" alt="grafico_comparativo2.jpg" />
 </a>
 
 <a href="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e5d45e" target="_blank">
-  <img src="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e5d45e" width="1280" alt="grafico_comparativo1" />
+  <img src="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e5d45e" width="1280" alt="grafico_comparativo3.jpg" />
 </a>

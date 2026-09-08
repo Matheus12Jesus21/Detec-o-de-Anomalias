@@ -1,6 +1,3 @@
-<img width="1280" height="616" alt="grafico_comparativo3 (2)" src="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" />
-<img width="1280" height="616" alt="grafico_comparativo2 (2)" src="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" />
-<img width="1280" height="616" alt="grafico_comparativo1" src="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e56d45e" />
 # Detecção de Anomalias em Transações Financeiras
 
 Projeto desenvolvido para o módulo de Machine Learning da **DIO (Digital Innovation One)**.
@@ -28,6 +25,14 @@ Análise do parâmetro `contamination` e o impacto nos Falsos Positivos vs. Frau
 ## 📈 Visualização (PCA 2D)
 A redução de dimensionalidade com PCA permitiu comparar lado a lado a **Realidade** vs. a **Previsão do Modelo**:
 
-![Comparativo 0.0010 Realidade vs Modelo](grafico_comparativo.png)
-![Comparativo 0.0017 Realidade vs Modelo](grafico_comparativo2.png)
-![Comparativo 0.0100 Realidade vs Modelo](grafico_comparativo3.png)
+<a href="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" target="_blank">
+  <img src="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" width="1280" alt="grafico_comparativo3" />
+</a>
+
+<a href="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" target="_blank">
+  <img src="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" width="1280" alt="grafico_comparativo2" />
+</a>
+
+<a href="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e5d45e" target="_blank">
+  <img src="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e5d45e" width="1280" alt="grafico_comparativo1" />
+</a>

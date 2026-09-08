@@ -25,4 +25,6 @@ Análise do parâmetro `contamination` e o impacto nos Falsos Positivos vs. Frau
 ## 📈 Visualização (PCA 2D)
 A redução de dimensionalidade com PCA permitiu comparar lado a lado a **Realidade** vs. a **Previsão do Modelo**:
 
-![Comparativo Realidade vs Modelo](grafico_comparativo.png)
+![Comparativo 0.0010 Realidade vs Modelo](grafico_comparativo.png)
+![Comparativo 0.0017 Realidade vs Modelo](grafico_comparativo2.png)
+![Comparativo 0.0100 Realidade vs Modelo](grafico_comparativo3.png)

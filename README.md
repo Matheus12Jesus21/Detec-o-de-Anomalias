@@ -1,3 +1,6 @@
+<img width="1280" height="616" alt="grafico_comparativo3 (2)" src="https://github.com/user-attachments/assets/f6a34671-a374-4035-accb-531c0170cb02" />
+<img width="1280" height="616" alt="grafico_comparativo2 (2)" src="https://github.com/user-attachments/assets/c9b48aac-355a-4f40-be12-47a8ccad4a50" />
+<img width="1280" height="616" alt="grafico_comparativo1" src="https://github.com/user-attachments/assets/17ed01aa-8d64-49e0-bcad-cc198e56d45e" />
 # Detecção de Anomalias em Transações Financeiras
 
 Projeto desenvolvido para o módulo de Machine Learning da **DIO (Digital Innovation One)**.
